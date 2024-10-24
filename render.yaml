@@ -11,6 +11,4 @@ services:
         value: production
     autoDeploy: true
     healthCheckPath: /
-    regions:
-      - oregon
-      - virginia
+    regions: oregon
