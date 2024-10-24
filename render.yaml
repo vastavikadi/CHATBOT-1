@@ -1,17 +1,14 @@
 version: 1
-
 services:
   - type: web
     name: FARM-FRIEND-AI
     env: python
-    plan: free  # or 'starter', 'pro', etc. based on your needs
+    plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: python main.py
     envVars:
       - key: FLASK_ENV
         value: production
-      - key: GROQ_API_KEY
-        value: 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
     autoDeploy: true
     healthCheckPath: /
     regions:
