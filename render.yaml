@@ -11,4 +11,3 @@ services:
         value: production
     autoDeploy: true
     healthCheckPath: /
-    regions: oregon
