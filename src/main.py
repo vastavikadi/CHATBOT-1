@@ -81,6 +81,10 @@ def is_rate_limited(ip):
     rate_limit_store[ip].append(current_time)
     return False
 
+@app.route('/')
+def health_check():
+    return "Healthy", 200
+
 @app.route('/FARM-FRIEND-ChatBot', methods=['POST'])
 def chat():
     ip = request.remote_addr
